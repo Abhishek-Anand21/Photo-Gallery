@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Adding icon to the page -->
+    <link rel="shortcut icon" href="./icon.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking the css -->
+    <link rel="stylesheet" href="photoGallery.css">
+    <link rel="stylesheet" href="lightbox.css">
+
+    <!-- Linking the js -->
+    <script src="./photoGallery.js" defer></script>
+
+    <!-- Assigning the title -->
+    <title>Photo Gallery App</title>
+</head>
+<body>
+    <!-- Header part containing text and search box -->
+    <header class="header-part container">
+        <h1>Photo Gallery 🖼️</h1>
+        <hr>
+
+        <!-- Creating the search bar and the button -->
+        <form class="search">
+            <input type="text" placeholder="Try finding images...">
+            <input type="submit" value="Find 🔎" class="btn">
+        </form>
+    </header>
+
+    <!-- Section part -->
+    <section class="section-part container">
+
+        <!-- Defining a div specifically for the loader which will display until the results are displayed -->
+        <div class="d-flex justify-content-center">
+			<div class="spinner-border" role="status" id="loading">
+				<span class="display-only"><br><br> Your Image Will Load Here... <br><br><br><br> Tips💡: Click on an image to view it in a larger size and use buttons to go to the next or previous image</span>
+			</div>
+		</div>
+
+		<!-- Div for showing images from the js file -->
+        <div class="image-gallery" id="gallery"></div>
+    </section>
+
+    <!-- Linking js to perform actions -->
+    <script src="lightbox-plus-jquery.js"></script>
+</body>
+</html>
